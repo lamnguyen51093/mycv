@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>My Online CV</title>
+    <title>My Online Blog</title>
 </head>
 <!-- Phần Layout CSS -->
 <style>
@@ -32,7 +32,7 @@ nav {
     background-color: rgb(57, 55, 55);
     padding: 10px 30px;
     box-shadow: 0 2px 4px;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 8px;
     display: inline-block;
 }
@@ -53,6 +53,60 @@ nav a:hover {
     transform: scale(1.3);
 }
 
+.navbar {
+    background-color: #444;
+    padding: 10px 20px;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu-item a {
+    color: #eba14c;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Menu con*/
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.sub-menu li a {
+    color: #eba14c;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #555;
+}
+
+.sub-menu li a:hover {
+    background-color: #555;
+}
+
+/* Hover hiện menu con */
+.menu-item:hover .sub-menu {
+    display: block;
+}
 main {
     display: flex;
     max-width: 1200px;
@@ -110,14 +164,22 @@ footer {
  <body>
 <!-- Phần đầu mục -->
     <header>
-        <h2>My <em>CV</em></h2>
+        <h2>My <em>Blog</em></h2>
     </header>
 <!-- Thanh điều hướng trang-->
-    <nav>
-        <a href="index.html">Trang chủ</a>
+    <nav class="navbar">
+        <ul class="main-menu">
+        <li class="menu-item"><a href="index.html">Trang chủ</a></li>
+        <li class="menu-item">
         <a href="#">Công việc</a>
-        <a href="sothich.html">Sở thích</a>
-        <a href="#">Liên hệ</a>
+        <ul class="sub-menu">
+            <li><a href="congviec/mycv.html">My CV</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+        </li>
+        <li class="menu-item"><a href="sothich.html">Sở thích</a></li>
+        <li class="menu-item"><a href="#">Liên hệ</a></li>
+        </ul>
     </nav>
 <!-- Phần thân giữa -->
     <Main>
