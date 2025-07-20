@@ -1,2 +1,0 @@
-# mycv
-learn html
